@@ -1,0 +1,339 @@
+@import url("https://fonts.googleapis.com/css?family=Catamaran:400,700|Grand+Hotel");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --slantedText: "Grand Hotel", cursive;
+  --primaryColor:  #006633;
+  --secondaryColor: #FFCC33;
+  --mainDark: #3a3e3b;
+  --mainWhite: #fff;
+  --mainGrey: #e5e5e5;
+  --mainTransition: all 0.3s ease-in-out;
+  --letterSpacing: 0.5rem;
+}
+body {
+  font-family: "Catamaran", sans-serif;
+  line-height: 1.5;
+  background: rgba(128, 128, 128, 0.651);
+}
+
+/* Nav Bar*/
+.navbar{
+  background: var(--mainDark);
+  padding: 1.5rem 2rem;
+  width: 100%;
+}
+.nav-link{
+  display: block;
+  padding: 2rem 2rem;
+  border-bottom: 1px solid beige;
+  color: black;
+  text-transform: capitalize;
+  text-decoration: none;
+  letter-spacing: var(--letterSpacing);
+  transition: var(--mainTransition);
+}
+
+.nav-link:hover{
+  background: var(--primaryColor);
+  color: var(--mainWhite);
+}
+
+@media screen and (min-width:568px){
+  .navbar{
+    background: var(--primaryColor);
+    display: grid;
+    padding: 1rem 2rem;
+  }
+  .nav-links{
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(5,1fr);
+  }
+  .nav-link{
+    padding: 1rem 2rem;
+    border: none;
+    text-align: center;
+    color: var(--mainWhite);
+
+  }
+  .nav-link:hover{
+    background: var(--secondaryColor);
+    color: black;
+  }
+}
+
+/* Nav Bar End*/
+
+
+.underline{
+  width: 100%;
+  border: 2px solid var(--secondaryColor);
+}
+
+/*banner*/
+.background-img{
+  background: var(--primaryColor);
+  min-height: 90vh;
+}
+.logo{
+
+  display: block;
+  text-align: center;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.logo-img{
+  max-width: 200px;
+  max-height: 200px;
+}
+
+.banner-text{
+  display: block;
+  text-align: center;
+  padding-bottom: 2rem;
+}
+.banner-text h1{
+  font-size: 3rem;
+  text-transform: uppercase;
+  letter-spacing: var(--letterSpacing);
+  font-weight: 600;
+  color: var(--mainWhite)
+}
+.btn-container{
+  padding: 2rem;
+  text-align: center; 
+}
+.btn{
+  display: inline-block;
+  letter-spacing: var(--letterSpacing);
+  text-transform: uppercase;
+  border: 2px solid black;
+  padding: 0.9rem 2.5rem;
+  background: var(--secondaryColor);
+  color: black;
+  cursor: pointer;
+  transition: var(--mainTransition);
+  text-decoration: none;
+  text-align: center;
+}
+
+.btn:hover{
+  background: var(--mainDark);
+  color: var(--secondaryColor);
+}
+
+@media screen and (min-width:568px){
+  .background-img{
+    min-height: 90vh;
+    background-image: linear-gradient(rgba(58, 212, 71, 0.3),rgba(25, 124, 41, 0.3)), url(background.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+}
+/* Banner End*/
+
+/* overview*/
+.overview{
+  margin: 2rem;
+  padding: 2rem;
+}
+.overview-title{
+  font-size: 2.5rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: var(--letterSpacing);
+  padding: 1rem;
+}
+.overview-text{
+  font-size: 1.5rem;
+  text-transform: capitalize;
+  padding: 0 1rem 1rem 1rem;
+}
+/* overview ends*/
+
+/*master's program*/
+  .masters{
+    margin: 2rem;
+    padding: 0 2rem 2rem 2rem;
+  }
+  .masters-title{
+    font-size: 2.5rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: var(--letterSpacing);
+  padding: 1rem;
+  }
+  .masters-text{
+  font-size: 1.5rem;
+  text-transform: capitalize;
+  padding: 0 1rem 1rem 3rem;
+  }
+  .masters-text ul li a{
+  text-decoration: none;
+  color: black;
+  }
+/*masters program end*/
+
+/* table  ms*/
+
+.table-title{
+  margin: 4rem;
+  font-size: 2.5rem;
+  padding: 1rem 1rem 0 1rem;
+  text-transform: uppercase;
+  letter-spacing: var(--letterSpacing);
+}
+
+.table-content{
+  margin: 4rem;
+  font-size: 1rem;
+  padding: 0 1rem 1rem 1rem;
+}
+
+table, th, td{
+  text-transform: capitalize;
+  font-size: 1rem;
+  border: 1px solid black ;
+  color: black;
+  text-align: center;
+}
+.odd{
+  background: var(--primaryColor);
+}
+.even{
+  background: var(--secondaryColor);
+}
+
+/* tables end*/
+
+/* Survey Form Link*/
+.survey-title{
+  text-transform: capitalize;
+  font-size: 2rem;
+  text-align: center;
+  font-weight: bold;
+  letter-spacing: var(--letterSpacing);
+  padding: 2rem 0 1rem 0;
+}
+
+/*footer*/
+
+ .footer-title{
+   text-transform: capitalize;
+   font-size: 2rem;
+   color: var(--mainWhite);
+ }
+ .footer-text{
+  font-size: 1.3rem;
+  color: var(--mainWhite);
+ }
+ .icons .fa{
+  color: var(--mainWhite);
+  transition: var(--mainTransition);
+ }
+ .footer-logo{
+   max-width: 100px;
+   max-height: 100px;
+   
+ }
+.footerlogo{
+}
+.footer{
+  padding: 1rem;
+  background: var(--primaryColor);
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  text-align: end;
+}
+.icons{
+  font-size: 3rem;
+  font-weight: bold;
+  color: var(--mainWhite);
+  text-align: center;
+}
+.icons .fa:hover{
+  color: var(--secondaryColor);
+  transform: translateY(-15px);
+}
+.contact{
+  text-align: start;
+}
+
+
+/* footer end*/
+
+
+
+/* Survey Html*/
+
+/* Header
+  .header{
+    width: 100%;
+    background: var(--primaryColor);
+    border: 1px solid var(--primaryColor);
+    text-align: center;
+  }
+  .survey-title{
+    text-transform: uppercase;
+    letter-spacing: var(--letterSpacing);
+    color: var(--secondaryColor);
+  }*/
+
+  body{
+    font-family: "Catamaran", sans-serif;
+    line-height: 1.5;
+    background: linear-gradient(rgba(61, 235, 18, 0.5),rgba(240, 225, 14, 0.5));
+  }
+
+  #survey-title{
+    border: 5px solid #006633;
+    padding: 10px;
+    box-shadow: 5px 10px ;
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    background: var(--secondaryColor);
+    color: black;
+    font-weight: bold;
+  }
+
+
+  /*survey form*/
+
+  
+	
+  
+.table-submit{
+    text-align: center;
+    padding: 0 2rem 2rem 2rem;  
+  }
+.submit-text{
+  border: 1px solid black;
+  background: yellow;
+  color: black;
+  padding: 1rem 2rem 1rem 2rem;
+  cursor: pointer;
+}
+table{
+  margin: 2rem auto;
+  width: 70%;
+  padding: 0;
+}
+.req{
+  color: red;
+}
+
+/* end of header*/
+
+

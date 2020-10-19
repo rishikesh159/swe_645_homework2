@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <title>Survey</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+    <!-- custom css -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="survey-title">
+      <p>Survey Form</p>
+    </div>
+
+    <table> 
+      <!-- indicates the width and cellpadding and cellspacing of the survey table -->  
+      <TR> 
+    <form method ="post" action="" autocomplete="on"> 
+      <div class="form-container">
+      <TD> <p><label> First Name: <sup class="req">*</sup></TD> 
+      <TD> <input type="text" id ="username" 
+      placeholder = "First name" autofocus required/> 
+      <!-- the "First name" input field automatically get focus when the page loads --> 
+      </label> 
+      </p></TD>  
+      
+      <TR><TD> <p><label> Last Name: <sup class="req">*</sup></TD> 
+      <TD> <input type="text"
+      placeholder = "Last name"/> 
+      <!-- the "First name" input field automatically get focus when the page loads --> 
+      </label> 
+      </p></TD> </TR>
+      <TR><TD> 
+      <p><label>Street Address:<sup class="req">*</sup></TD> 
+      <TD> <input type="text" id="StreetAddress" 
+      placeholder="Street Address" required /> 
+      </label> 
+      </p></TD></TR> 
+      <TD> 
+      <p><label>City: <sup class="req">*</sup></TD> 
+      <TD> <input type="text" id="City" 
+      placeholder="City"/> 
+      </label> 
+      </p></TD> 
+      <TR><TD> 
+      <p><label>State:<sup class="req">*</sup></TD> 
+      <TD> <input type="text" id="State" 
+      placeholder="State" required /> 
+      </label> 
+      </p></TD> 
+      <TR> <TD> 
+      <p> 
+      <label>Zip: <sup class="req">*</sup></TD> 
+      <TD> <input id="zip" name="zip" type="number" pattern="[0-9]*"placeholder="zip"/> 
+      </label> 
+      </p></TD></TR> 
+      <TR><TD> 
+      
+      <P> 
+      <label>Telephone Number:<sup class="req">*</sup></TD> 
+      <TD> <input type="tel" placeholder="(###) ###-####" required /> 
+      </label> 
+      </P> </TD> 
+      <TR> <TD> 
+      <p> 
+      <label>Email:<sup class="req">*</sup></TD> 
+      <TD> <input type="Email" placeholder="name@domain.com" required /> 
+      </label> 
+      </p></TD></TR>  
+      <TR> <TD> 
+      <p> 
+      <label>Date of Survey: <sup class="req">*</sup></TD> 
+      <TD> <input type="date"/> 
+      </label> 
+      </p></TD></TR> 
+      <TR><TD> 
+      <p> 
+      What did you like the most about the campus<br /></TD> 
+      <TD> 
+      <label><input name="students" type="checkbox" value="students"/>Students  
+      </label> 
+      <label><input name="location" type="checkbox" value="Location"/>Location  
+      </label>
+      </label> 
+      <label><input name="campus" type="checkbox" value="campus"/>Campus  
+      </label> 
+      <label><input name="Atmosphere" type="checkbox" value="Atmosphere"/> Atmosphere 
+      </label> 
+      <label><input name="Dorm rooms" type="checkbox" value="Dorm rooms"/> Dorm Rooms 
+      </label> 
+      <label><input name="Sports" type="checkbox" value="Sports"/>Sports  
+      </label> 
+      </p></TD></TR> 
+      <TD> 
+      <p> 
+      How did you become interested in the university<br /></TD> 
+      <TD><label><input name="interested" type="radio" value="Friends"/>Friends 
+      </label> 
+      <label><input name="interested" type="radio" value="Telivision"/>Television  
+      </label> 
+      <label><input name="interested" type="radio" value="Internet"/> Internet 
+      </label> 
+      <label><input name="interested" type="radio" value="Other"/> Other 
+      </label> 
+      </p></TD></TR> 
+      <TR><TD> 
+      <p><label>Additional Comments:<br /></TD> 
+      <TD> <textarea name="comments" 
+      rows="4"cols="36"></textarea></label></p></TD> 
+      <!-- proides a text area which allows one to type in any additional comments --> 
+       
+            <p><TR>
+      <TD> <label>Likelihood of you recommending this school to other prospective students:</TD> 
+      <TD> <select name="rating" required > 
+      <option>Very Likely </option> 
+      <option>Likely</option> 
+      <option>Unlikely</option> 
+      </select> 
+      </label></TD></TR></P> 
+
+      <tr><td><p>
+        <label for="data">Raffle</label></td>
+        <td><input type="text" class="form-control" id="data" name="data" placeholder="1,2,3,4,5,6,7,8,9,10" onblur="calcMax()">
+        <div id="errorMsg" style="color: red"></div>
+      </div></p></td></tr>
+
+      </table> 
+      <br>
+      
+      <tr><td><p>
+        
+        
+        <td><button class="col-md-5 btn btn-primary btn-lg btn-block" type="submit" style="margin-left: 30rem;" value="Submit" onclick="return validateFields();">Submit</button>
+      </p></td></tr>
+
+      <tr><td><p>
+        
+        
+        <td><button class="col-md-5 btn btn-primary btn-lg btn-block" type="submit" value="Submit" style="margin-left: 30rem;">Cancel</button>
+      </p></td></tr>
+      
+    </div>
+      
+    </div>
+      </form> 
+      </TR> 
+
+      <!--footer-->
+    <footer class="footer">
+      <div class="contact" id="contactdept">
+        <div class="footer-title">
+          <h3>Contact Us</h3>
+        </div>
+        <div class="footer-text">
+          <p>Phone: 703-993-1530</p>
+          <p>Email: csgrad@gmu.edu</p>
+        </div>
+      </div>
+
+      <div class="icons">
+        <a href="https://www.facebook.com/georgemason/"><i class="fa fa-facebook"></i></a>
+        <a href="https://twitter.com/GeorgeMasonU?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><i class="fa fa-twitter"></i></a>
+        <a href="https://www.instagram.com/georgemasonu/?hl=en"><i class="fa fa-instagram"></i></a>
+      </div>
+
+      <div class="footerlogo">
+        <a href="https://www2.gmu.edu/"><img src="logo.png" class="footer-logo" alt="logo"></a>
+      </div>
+    </footer>
+
+    <!--footer end-->
+
+    <script type = "text/javascript">
+  function validateFields(){
+    var inputString = document.getElementById("data").value;
+	    var tokens = inputString.split(","); 
+	    if (tokens.length <10) 
+	    {
+	      document.getElementById("errorMsg").innerHTML = "Please Enter atleast 10 numbers";
+	      alertMsg += "Please enter atleast 10 digits in data field\n";
+      }
+      else
+    	{
+    		document.getElementById("errorMsg").innerHTML = "";
+      }
+    }
+      </script>
+
+  </body>
+</html>
+
+
+
